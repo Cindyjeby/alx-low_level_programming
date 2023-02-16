@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main - prints the size of various types
+ * main - Prints the size of various types
  * Return (0)
  */
-int main (void)
+int main(void)
 {
 	char a;
 	int b;
