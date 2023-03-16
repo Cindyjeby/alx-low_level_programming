@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
 /**
  * _print - moves a string one place to the left and prints the string
  * @str: string to move
@@ -18,7 +20,7 @@ void _print(char *str, int l)
 		i++;
 	}
 	_putchar('\n');
-	fre(str);
+	free(str);
 }
 /**
  * mul - multiplies a char with a string and places the answer into dest
@@ -35,7 +37,7 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 
 	mulrem = addrem = 0;
 
-	for (j = num_index, k = dest_index, j >= 0; j--, k--)
+	for (j = num_index, k = dest_index; j >= 0; j--, k--)
 	{
 		mul = (n - '0') * (num[j] - '0') + mulrem;
 		mulrem = mul / 10;
@@ -111,7 +113,7 @@ int main(int argc, char *argv[])
 	}
 	for (l1 = 0; argv[1][l1]; l1++)
 		;
-	for (l2 = 0; argv[2][l2]; 12++)
+	for (l2 = 0; argv[2][l2]; l2++)
 		;
 	ln = l1 + l2 + 1;
 	a = malloc(ln * sizeof(char));
