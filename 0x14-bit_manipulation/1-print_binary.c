@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i;
+	int i = 0;
 	int k = 0;
 	unsigned int l;
 
@@ -21,6 +21,6 @@ void print_binary(unsigned long int n)
 		else
 			_putchar('0');
 	}
-	if (!k)
+	if (k == 0)
 		_putchar('0');
 }
