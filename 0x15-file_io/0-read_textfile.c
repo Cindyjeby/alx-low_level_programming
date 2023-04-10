@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t k;
 	ssize_t t;
 
-	ch = fopen(filename, O_RDONLY);
+	ch = open(filename, O_RDONLY);
 
 	if (ch == -1)
 		return (0);
@@ -23,6 +23,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	k = write(STDOUT_FILENO, l, t);
 
 	free(l);
-	fclose(ch);
+	close(ch);
 	return (k);
 }
