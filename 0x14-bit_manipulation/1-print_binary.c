@@ -18,7 +18,7 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 			k++;
 		}
-		else
+		else if (k)
 			_putchar('0');
 	}
 	if (!k)
