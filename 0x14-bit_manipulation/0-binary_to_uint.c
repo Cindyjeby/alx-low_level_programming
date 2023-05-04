@@ -13,7 +13,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	while (b[k] != '\0')
 	{
-		if (b[k] == '0' || b[k] '1')
+		if (b[k] == '0' || b[k] == '1')
 		{
 			decimal = (decimal << 1) + (b[k] - '0');
 			k++;
