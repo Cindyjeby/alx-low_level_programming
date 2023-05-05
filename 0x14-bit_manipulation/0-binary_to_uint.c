@@ -6,19 +6,17 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int binary = 1;
 	unsigned int decimal = 0;
 
 	if (b == 0)
 		return (0);
-	for (int k = 0; b[k] != '\0'; k++)
+	for (int k = 0; b[k]; k++)
 	{
-		if (b[k] != '0' && b[k] != '1')
+		if (b[k] < '0' || b[k] > '1')
 		{
 			return (0);
 		}
-		decimal += (b[k] - '0') * binary;
-		binary *= 2;
+		decimal = 2 * decimal + (b[k] - '0');
 	}
 	return (decimal);
 }
