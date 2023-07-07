@@ -10,7 +10,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int k;
 	unsigned char comma_flag = 0;
 
-	if (!ht)
+	if (ht == NULL)
 		return;
 
 	print("{");
@@ -23,9 +23,9 @@ void hash_table_print(const hash_table_t *ht)
 			n = ht->array[k];
 			while (n != NULL)
 			{
-				printf("'%s': '%s'", node->key, node->value);
-				node = node->next;
-				if (node != NULL)
+				printf("'%s': '%s'", n->key, n->value);
+				n = n->next;
+				if (n != NULL)
 					printf(", ");
 			}
 			comma_flag = 1;
