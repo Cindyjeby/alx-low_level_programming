@@ -1,8 +1,9 @@
-#include "./hash_tables.h"
+#include "hash_tables.h"
 
 /**
  * hash_table_print - function that prints a hash table
  * @ht: a hash table
+ * Description: value pairs are printed in order they appear
  */
 void hash_table_print(const hash_table_t *ht)
 {
@@ -13,7 +14,7 @@ void hash_table_print(const hash_table_t *ht)
 	if (ht == NULL)
 		return;
 
-	print("{");
+	printf("{");
 	for (k = 0; k < ht->size; k++)
 	{
 		if (ht->array[k] != NULL)
